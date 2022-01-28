@@ -1,17 +1,35 @@
+// let theme;
 import {
   Links,
+  LinksFunction,
   LiveReload,
+  LoaderFunction,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
+  useLoaderData,
 } from "remix";
 import type { MetaFunction } from "remix";
+import bootstrap from "./styles/bootstrap.css";
+// import useTheme from "./utils/useTheme.server";
 
+// export let loader: LoaderFunction = async () => {
+//   const themeLoad = await useTheme("jidah");
+//   // console.log(themeLoad);
+//   return await "posts";
+// };
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
 };
-
+export let links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: bootstrap,
+    },
+  ];
+};
 export default function App() {
   return (
     <html lang="en">
@@ -22,7 +40,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Outlet bla="bla" />
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}
