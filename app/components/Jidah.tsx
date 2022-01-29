@@ -10,6 +10,7 @@ export default function Jidah({}: Props) {
       <Theme.SectionOne />
       <Theme.SectionTwo />
       <Theme.ProductsSection />
+      <Theme.CategorySection />
     </>
   );
 }
