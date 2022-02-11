@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = {
   title?: string;
   logo?: string;
@@ -21,10 +19,17 @@ export default function Header({ title, logo, menu }: Props) {
         <a className="navbar-brand d-inline-flex" href="index.html">
           <img
             className="d-inline-block"
-            src="assets/img/gallery/logo.png"
+            src={
+              logo
+                ? logo
+                : "https://pngpress.com/wp-content/uploads/2020/08/uploads_heart_heart_PNG51337.png"
+            }
+            style={{ width: 50 }}
             alt="logo"
           />
-          <span className="text-1000 fs-0 fw-bold ms-2">Majestic</span>
+          <span className="text-1000 fs-0 fw-bold ms-2">
+            {title ? title : "Jidah"}
+          </span>
         </a>
         <button
           className="navbar-toggler collapsed"
