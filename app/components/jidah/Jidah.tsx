@@ -9,28 +9,32 @@ type Props = {
   data?: any;
 };
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "bla",
-  };
-};
+// export const meta: MetaFunction = () => {
+//   return {
+//     title: "bla",
+//   };
+// };
 
-let Jidah = memo((props) => {
-  console.log(props);
+let Jidah = memo(({ data }: any) => {
+  // console.log(props);
   const loca = useLocation().pathname;
   return (
     <>
-      <Theme.Header />
-      <JidahChilds>
+      <JidahChilds data={data}>
         {loca == "/" ? (
           <>
-            <Theme.SectionOne />
-            <Theme.SectionTwo />
-            <Theme.ProductsSection />
+            <Theme.SectionOne data={data} />
+            <Theme.SectionTwo data={data} />
+            {/* <Theme.ProductsSection />
             <Theme.CategorySection />
+            <Theme.Products2Section />
+            <Theme.ShopByCategory />
+            <Theme.Footer /> */}
           </>
-        ) : loca.includes("product") ? (
+        ) : loca.includes("product/") ? (
           <Theme.SingleProduct />
+        ) : loca.includes("category/") ? (
+          <Theme.SingleCategory />
         ) : (
           ""
         )}

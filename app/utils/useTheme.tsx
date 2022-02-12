@@ -9,6 +9,7 @@ type Props = {
   data: any;
 };
 export default function useTheme({ themeName, data }: Props): JSX.Element {
+  // console.log(data);
   const [Theme, setTheme] = useState<string | null>(null);
   useEffect(() => {
     let cacheTheme = JSON.stringify(localStorage.getItem("theme")).replace(

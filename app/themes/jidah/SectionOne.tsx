@@ -8,7 +8,8 @@ export default function SectionOne({}: Props) {
       <div
         className="bg-holder overlay overlay-light"
         style={{
-          backgroundImage: "url(assets/img/gallery/header-bg.png)",
+          backgroundImage:
+            "url('https://technext.github.io/majestic-2/v1.0.1/assets/img/gallery/header-bg.png')",
           backgroundSize: "cover",
         }}
       ></div>

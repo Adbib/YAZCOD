@@ -29,7 +29,7 @@ export default function CategorySection({}: Props) {
             <div className="card card-span h-100 text-white">
               <img
                 className="card-img h-100"
-                src="assets/img/gallery/outfit.png"
+                src="https://technext.github.io/majestic-2/v1.0.1/assets/img/gallery/outfit.png"
                 alt="..."
               />
               <div className="card-img-overlay bg-dark-gradient">
@@ -66,7 +66,7 @@ export default function CategorySection({}: Props) {
             <div className="card card-span h-100 text-white">
               <img
                 className="card-img h-100"
-                src="assets/img/gallery/vanity-bag.png"
+                src="https://technext.github.io/majestic-2/v1.0.1/assets/img/gallery/vanity-bag.png"
                 alt="..."
               />
               <div className="card-img-overlay bg-dark-gradient">
@@ -101,7 +101,7 @@ export default function CategorySection({}: Props) {
             <div className="card card-span h-100 text-white">
               <img
                 className="card-img h-100"
-                src="assets/img/gallery/hat.png"
+                src="https://technext.github.io/majestic-2/v1.0.1/assets/img/gallery/hat.png"
                 alt="..."
               />
               <div className="card-img-overlay bg-dark-gradient">
@@ -136,7 +136,7 @@ export default function CategorySection({}: Props) {
             <div className="card card-span h-100 text-white">
               <img
                 className="card-img h-100"
-                src="assets/img/gallery/high-heels.png"
+                src="https://technext.github.io/majestic-2/v1.0.1/assets/img/gallery/high-heels.png"
                 alt="..."
               />
               <div className="card-img-overlay bg-dark-gradient">

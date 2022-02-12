@@ -1,8 +1,10 @@
-import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "remix";
 
 type Props = {};
 
-export default function SectionTwo({}: Props) {
+export default function SectionTwo(props: any): JSX.Element {
+  console.log(props);
   return (
     <section
       className="py-0"
@@ -14,7 +16,7 @@ export default function SectionTwo({}: Props) {
           <div className="col-md-6">
             <div className="card card-span h-100 text-white">
               {" "}
-              <img
+              <LazyLoadImage
                 className="img-fluid"
                 src="https://technext.github.io/majestic-2/v1.0.1/assets/img/gallery/her.png"
                 alt="..."
@@ -22,16 +24,16 @@ export default function SectionTwo({}: Props) {
               />
               <div className="card-img-overlay d-flex flex-center">
                 {" "}
-                <a className="btn btn-lg btn-light" href="#!">
+                <Link className="btn btn-lg btn-light" to={"/category/:id"}>
                   For Her
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="col-md-6">
             <div className="card card-span h-100 text-white">
               {" "}
-              <img
+              <LazyLoadImage
                 className="img-fluid"
                 src="https://technext.github.io/majestic-2/v1.0.1/assets/img/gallery/him.png"
                 alt="..."
@@ -39,9 +41,9 @@ export default function SectionTwo({}: Props) {
               />
               <div className="card-img-overlay d-flex flex-center">
                 {" "}
-                <a className="btn btn-lg btn-light" href="#!">
+                <Link className="btn btn-lg btn-light" to={"/category/:id"}>
                   For Him{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
